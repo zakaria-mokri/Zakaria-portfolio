@@ -10,7 +10,7 @@
 export const CONSENT_KEY = "za-analytics-consent";
 export type ConsentValue = "accepted" | "declined";
 
-const GA_ID = import.meta.env["VITE_GA_MEASUREMENT_ID"] as string | undefined;
+const GA_ID = "G-GZW5SLFMD6";
 
 export function getConsent(): ConsentValue | null {
   if (typeof window === "undefined") return null;
