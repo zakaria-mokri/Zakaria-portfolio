@@ -13,6 +13,9 @@ const isLovableSandbox =
   process.env["LOVABLE_SANDBOX"] === "1" || !!process.env["DEV_SERVER__PROJECT_PATH"];
 
 export default defineConfig({
+  vite: {
+    base: "/Zakaria-portfolio/",
+  },
   // No server runtime for the static export: every route is rendered to plain
   // HTML at build time into dist/client.
   ...(isLovableSandbox ? {} : { nitro: false as const }),
